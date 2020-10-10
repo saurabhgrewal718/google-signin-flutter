@@ -5,6 +5,7 @@ import './sign_in.dart';
 class FirstScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print(imageUrl);
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
