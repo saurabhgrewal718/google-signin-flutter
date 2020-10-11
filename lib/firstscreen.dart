@@ -20,44 +20,44 @@ class FirstScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
-              CircleAvatar(
-                backgroundImage: NetworkImage(
-                  imageUrl,
-                ),
-                radius: 60,
-                backgroundColor: Colors.transparent,
-              ),
-              SizedBox(height: 40),
-              Text(
-                'NAME',
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black54),
-              ),
-              Text(
-                name,
-                style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.deepPurple,
-                    fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 20),
-              Text(
-                'EMAIL',
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black54),
-              ),
-              Text(
-                email,
-                style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.deepPurple,
-                    fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 40),
+              // CircleAvatar(
+              //   backgroundImage: NetworkImage(
+              //     imageUrl,
+              //   ),
+              //   radius: 60,
+              //   backgroundColor: Colors.transparent,
+              // ),
+              // SizedBox(height: 40),
+              // Text(
+              //   'NAME',
+              //   style: TextStyle(
+              //       fontSize: 15,
+              //       fontWeight: FontWeight.bold,
+              //       color: Colors.black54),
+              // ),
+              // Text(
+              //   name,
+              //   style: TextStyle(
+              //       fontSize: 25,
+              //       color: Colors.deepPurple,
+              //       fontWeight: FontWeight.bold),
+              // ),
+              // SizedBox(height: 20),
+              // Text(
+              //   'EMAIL',
+              //   style: TextStyle(
+              //       fontSize: 15,
+              //       fontWeight: FontWeight.bold,
+              //       color: Colors.black54),
+              // ),
+              // Text(
+              //   email,
+              //   style: TextStyle(
+              //       fontSize: 25,
+              //       color: Colors.deepPurple,
+              //       fontWeight: FontWeight.bold),
+              // ),
+              // SizedBox(height: 40),
               RaisedButton(
                 onPressed: () {
                   signOutGoogle();

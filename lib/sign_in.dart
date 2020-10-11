@@ -14,6 +14,7 @@ String imageUrl;
 
 Future<String> signInWithGoogle() async {
   await Firebase.initializeApp();
+  print("hey");
 
   final GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
   final GoogleSignInAuthentication googleSignInAuthentication = await googleSignInAccount.authentication;
@@ -23,9 +24,11 @@ Future<String> signInWithGoogle() async {
     idToken: googleSignInAuthentication.idToken,
   );
 
+  print("hetyyyyyy");
+
   final UserCredential authResult = await _auth.signInWithCredential(credential);
   final User user = authResult.user;
-  print(user);
+  print("i am the $user");
 
   if (user != null) {
     // Add the following lines after getting the user
