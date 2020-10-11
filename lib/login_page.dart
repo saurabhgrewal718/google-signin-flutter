@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:googlesignin/firstscreen.dart';
+import 'package:googlesignin/sign_in.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -29,7 +31,19 @@ class _LoginPageState extends State<LoginPage> {
  Widget _signInButton() {
     return OutlineButton(
       splashColor: Colors.grey,
-      onPressed: () {},
+      onPressed: () {
+        signInWithGoogle().then((result) {
+          if (result != null) {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) {
+                  return FirstScreen();
+                },
+              ),
+            );
+          }
+        });
+      },
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
       highlightElevation: 0,
       borderSide: BorderSide(color: Colors.grey),
@@ -39,7 +53,6 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image(image: AssetImage("assets/google_logo.png"), height: 35.0),
             Padding(
               padding: const EdgeInsets.only(left: 10),
               child: Text(
@@ -56,3 +69,4 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+
